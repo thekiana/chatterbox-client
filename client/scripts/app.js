@@ -31,14 +31,14 @@ var App = {
 
         }
         if (data.results[i].roomname !== undefined) {
-          Rooms[data.results[i].roomname] = data.results[i].roomname;
+          Rooms.roomsList[data.results[i].roomname] = data.results[i].roomname;
         }
       }
       for (var key in Messages) {
         MessagesView.renderMessage(Messages[key]);
       }
-      for (var key in Rooms) {
-        RoomsView.renderRoom(Rooms[key]);
+      for (var key in Rooms.roomsList) {
+        RoomsView.renderRoom(Rooms.roomsList[key]);
       }
       callback();
     });

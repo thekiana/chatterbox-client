@@ -12,7 +12,7 @@ var FormView = {
     Parse.create({
       'username': App.username,
       'text': $('#message').val(),
-      'roomname': 'away'
+      'roomname': $("#rooms select option:selected").text()
     });
     console.log('click!');
   },
