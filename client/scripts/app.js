@@ -19,7 +19,7 @@ var App = {
   fetch: function (callback = () => { }) {
     Parse.readAll((data) => {
       // examine the response from the server request:
-      console.log(data);
+      console.log(data.results);
       for (var i = 0; i < data.results.length; i++) {
         if (data.results[i].username !== undefined & data.results[i].text !== undefined) {
           Messages[data.results[i].objectId] = {
@@ -27,10 +27,17 @@ var App = {
             text: data.results[i].text,
             roomname: data.results[i].roomname
           };
+
+        }
+        if (data.results[i].roomname !== undefined) {
+          Rooms[data.results[i].roomname] = data.results[i].roomname;
         }
       }
       for (var key in Messages) {
         MessagesView.renderMessage(Messages[key]);
+      }
+      for (var key in Rooms) {
+        RoomsView.renderRoom(Rooms[key]);
       }
       callback();
     });

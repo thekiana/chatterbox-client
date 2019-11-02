@@ -7,6 +7,7 @@ var MessagesView = {
   },
 
   renderMessage: function(message) {
+    
     $('#chats').append(MessageView.render(message));
   }
 
