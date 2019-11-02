@@ -2,12 +2,12 @@ var MessagesView = {
 
   $chats: $('#chats'),
 
-  initialize: function() {
+  initialize: function(data) {
+
   },
 
-  renderMessage: function() {
-    $('#chats').append(MessageView.render(Messages['kJ8XUaKNrO']));
+  renderMessage: function(message) {
+    $('#chats').append(MessageView.render(message));
   }
-
 
 };
