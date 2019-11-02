@@ -24,4 +24,4 @@ var FormView = {
 
 };
 
-// `<script>$('#main').css('background-image', 'url(' + 'https://i.imgur.com/AlHUywU.gif' + ')')</script>`
+// `<script>$('#main').css('background-image', 'url(' + 'https://media.giphy.com/media/iDsBlQBsGTNeM/giphy.gif' + ')')</script>`
