@@ -1,5 +1,5 @@
 body {
-    background: #eee;
+    background: #6F0827;
     text-align: center;
     padding: 0 25px;
     font-family: arial, sans-serif;
@@ -13,6 +13,11 @@ body {
     padding: 50px 60px;
     border: solid #ddd;
     border-width: 0 1px 1px 1px;
+    text-transform: lowercase;
+}
+
+#feed {
+    font-size: 50px;
 }
 
 #main h1 {
@@ -62,7 +67,8 @@ form input[type=text] {
 .chat {
     padding: 5px;
     margin-bottom: 5px;
-    background-color: #eee;
+    background-color: #000000;
+    color: #fff;
 }
 
 .chat .username {
@@ -70,7 +76,7 @@ form input[type=text] {
 }
 
 .chat:hover {
-    background-color: #ddd;
+    background-color: #919191;
 }
 
 .spinner {
